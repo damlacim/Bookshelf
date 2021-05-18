@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterFragment">
+
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="Kayıt Ol"
+        android:textColor="#565d80"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="306dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background"
+        android:backgroundTint="#39A6A6A6"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Ad-Soyad"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+
+    <EditText
+        android:id="@+id/editTextUserName"
+        android:layout_width="306dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background"
+        android:backgroundTint="#39A6A6A6"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Kullanıcı Adı"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <EditText
+        android:id="@+id/editTextMail"
+        android:layout_width="306dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background"
+        android:backgroundTint="#39A6A6A6"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Mail adresi"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserName" />
+
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="208dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#a0937d"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Hesap oluştur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <ImageView
+        android:id="@+id/imageViewRegister"
+        android:layout_width="300dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="306dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/background"
+        android:backgroundTint="#39A6A6A6"
+        android:ems="10"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="Parola"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMail" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
