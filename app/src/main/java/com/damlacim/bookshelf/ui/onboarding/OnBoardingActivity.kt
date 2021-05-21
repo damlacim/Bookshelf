@@ -2,7 +2,7 @@ package com.damlacim.bookshelf.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle
-import com.BaseActivity
+import com.damlacim.bookshelf.BaseActivity
 import com.damlacim.bookshelf.MainActivity
 import com.damlacim.bookshelf.databinding.ActivityOnBoardingBinding
 

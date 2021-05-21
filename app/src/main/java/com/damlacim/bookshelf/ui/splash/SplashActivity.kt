@@ -1,10 +1,9 @@
 package com.damlacim.bookshelf.ui.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
-import com.BaseActivity
+import com.damlacim.bookshelf.BaseActivity
 import com.damlacim.bookshelf.MainActivity
 import com.damlacim.bookshelf.databinding.ActivitySplashBinding
 import com.damlacim.bookshelf.ui.onboarding.OnBoardingActivity

@@ -1,4 +1,4 @@
-package com
+package com.damlacim.bookshelf
 
 import android.content.Context
 import android.os.Bundle
