@@ -10,7 +10,6 @@ import com.damlacim.bookshelf.R
 
 class BookAdd : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -1,14 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.BookAdd">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbarStyle="insideInset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context=".ui.BookAdd">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="Kitap Ekle"
+                    android:textColor="#565d80"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/etBookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="#39A6A6A6"
+                    android:ems="12"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Kitabın adını girin"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etAuthorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="#39A6A6A6"
+                    android:ems="12"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Yazarın adını girin"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etTypeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="#39A6A6A6"
+                    android:ems="12"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Kitabın türünü giriniz"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etPublisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="#39A6A6A6"
+                    android:ems="12"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Yayınevini girin"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/etPageNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/background"
+                    android:backgroundTint="#39A6A6A6"
+                    android:ems="12"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Sayfa sayısını girin"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/tvReadTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Kitap Okundu mu?"
+                    android:textColor="#565d80"
+                    android:textSize="17sp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tvRead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:background="@drawable/background"
+                        android:backgroundTint="#39A6A6A6"
+                        android:ems="6"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingHorizontal="10dp"
+                        android:text="Evet"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvNotRead"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNotRead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@+id/tvRead"
+                        android:background="@drawable/background"
+                        android:backgroundTint="#39A6A6A6"
+                        android:ems="6"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingHorizontal="10dp"
+                        android:text="Hayır"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.77"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Yorum"
+                    android:textColor="#565d80"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/etCommentBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background"
+                    android:backgroundTint="#39A6A6A6"
+                    android:ems="15"
+                    android:gravity="center" />
+                <TextView
+                    android:id="@+id/tvFav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="55dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Favorilerinize ekleyin"
+                    android:textColor="#565d80"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tvFavOk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:background="@drawable/background"
+                        android:backgroundTint="#39A6A6A6"
+                        android:ems="6"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingHorizontal="10dp"
+                        android:text="Evet"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvFavNotOk"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvFavNotOk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background"
+                        android:backgroundTint="#39A6A6A6"
+                        android:ems="6"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingHorizontal="10dp"
+                        android:text="Hayır"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.77"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/addButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#a0937d"
+                    android:text="Kütüphaneye ekle"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
